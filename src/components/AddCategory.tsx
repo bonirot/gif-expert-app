@@ -1,6 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
-export const AddCategory = ({ onNewCategory }: any) => {
+type Props = {
+  onNewCategory: (category: string) => void;
+};
+
+export const AddCategory = ({ onNewCategory }: Props) => {
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
@@ -25,37 +29,3 @@ export const AddCategory = ({ onNewCategory }: any) => {
     </form>
   );
 };
-
-//Tipado según CHATGPT
-
-// import { useState, ChangeEvent, FormEvent } from "react";
-
-// interface AddCategoryProps {
-//   setCategories: React.Dispatch<React.SetStateAction<string[]>>;
-// }
-
-// export const AddCategory = ({ setCategories }: AddCategoryProps) => {
-//   const [inputValue, setInputValue] = useState<string>("");
-
-//   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-//     setInputValue(event.target.value);
-//   };
-
-//   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-//     event.preventDefault();
-//     if (inputValue.trim().length <= 1) return;
-//     setCategories((categories: string[]) => [inputValue, ...categories]);
-//     setInputValue("");
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <input
-//         type="text"
-//         placeholder="Search Gifs"
-//         value={inputValue}
-//         onChange={handleInputChange}
-//       />
-//     </form>
-//   );
-// };
