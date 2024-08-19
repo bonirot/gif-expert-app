@@ -3,10 +3,7 @@ import { AddCategory } from "./components/AddCategory";
 import { GritGrid } from "./components/GritGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState([
-    "One Punch",
-    "Dragon Ball",
-  ] as string[]);
+  const [categories, setCategories] = useState(["One Punch"] as string[]);
 
   const onAddCategory = (newCategory: string) => {
     ////////////////////////////////////// Posibilidad 2 de chatpgt más completa
