@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import { getGifs } from "../utils/getGifs";
 import { Iimages } from "../utils/Interfaces";
 import { GifItem } from "./GifItem";
+import { useFecthGifs } from "../hooks/useFecthGifs";
 
 type Props = {
   category: string;
@@ -9,16 +8,17 @@ type Props = {
 
 //Otra forma de tipar "category" es así, pero es menos recomendable: { category }:{ category:string }
 export const GritGrid = ({ category }: Props) => {
-  const [images, setImages] = useState([]);
+  const { images, isLoading } = useFecthGifs(category);
+  // const [images, setImages] = useState([]);
 
-  const getImages = async () => {
-    const newImages = await getGifs(category);
-    setImages(newImages);
-  };
+  // const getImages = async () => {
+  //   const newImages = await getGifs(category);
+  //   setImages(newImages);
+  // };
 
-  useEffect(() => {
-    getImages();
-  }, []); //si las llaves están vacías significa que solamente va a ejecutar el useeffect la primera vez
+  // useEffect(() => {
+  //   getImages();
+  // }, []); //si las llaves están vacías significa que solamente va a ejecutar el useeffect la primera vez
 
   return (
     <>
