@@ -13,12 +13,10 @@ export const useFecthGifs = (category: any) => {
 
   useEffect(() => {
     getImages();
-  }, []); //si las llaves están vacías significa que solamente va a ejecutar el useeffect la primera vez
+  }, []);
 
   return {
-    images, // images: images
-    isLoading, // isLoading: isLoading
+    images,
+    isLoading,
   };
 };
-
-// Un hook no es más que una función que regresa algo
