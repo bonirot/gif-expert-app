@@ -1,4 +1,5 @@
 export interface Iimages {
-  id: number;
+  id: string;
   title: string;
+  urlImg: string;
 }

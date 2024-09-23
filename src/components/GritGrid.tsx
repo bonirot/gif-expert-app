@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getGifs } from "../utils/getGifs";
 import { Iimages } from "../utils/Interfaces";
+import { GifItem } from "./GifItem";
 
 type Props = {
   category: string;
@@ -22,15 +23,16 @@ export const GritGrid = ({ category }: Props) => {
   return (
     <>
       <h3>{category}</h3>
-      <ol>
+      <div className="card-grid">
         {/* {images.map((img: Iimages) => (
           <li key={img.id}>{img.title}</li>
         ))} */}
-        {images.map(({ id, title }) => (
-          <li key={id}>{title}</li>
+        {images.map((img: Iimages) => (
+          // <GifItem key={img.id} title={img.title} url={img.url} />
+          <GifItem key={img.id} {...img} />
         ))}
         {/* Esta es otra forma más pro de ponerlo, usando desestructurando el objeto */}
-      </ol>
+      </div>
     </>
   );
 };
