@@ -2,7 +2,7 @@
 
 ![GifExpertApp](./public/gifexp%20screenshot.png)
 
-This is an amazing app to find some of the most awesome gifs!
+This is an amazing app to find some of the most awesome gifs using GIPHY API!
 
 ## Tools
 
