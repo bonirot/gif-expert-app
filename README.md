@@ -18,3 +18,11 @@ Run: npm run dev
 ### Deploy
 
 Deployment with Netlify [GifExpertApp](https://gifexp.netlify.app)
+
+## Testing
+
+npm install --save-dev jest babel-jest @babel/preset-env @babel/preset-react
+
+npm install --save-dev @testing-library/react @types/jest jest-environment-jsdom
+
+npm install --save-dev whatwg-fetch
