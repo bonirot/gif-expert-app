@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AddCategory, GritGrid } from "./components";
+import { BsFiletypeGif } from "react-icons/bs";
 
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState(["One Punch"] as string[]);
@@ -30,7 +31,9 @@ export const GifExpertApp = () => {
   return (
     <>
       {/* título */}
-      <h1>GifExpertApp</h1>
+      <h1>
+        <BsFiletypeGif /> GifExpertApp
+      </h1>
 
       {/* input */}
       <AddCategory
