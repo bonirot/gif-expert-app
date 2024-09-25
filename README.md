@@ -1,6 +1,6 @@
 # GifExpertApp
 
-![GifExpertApp](./public/gifexp%20screenshot.png)
+![GifExpertApp](./public/gifexp-screen.png)
 
 This is an amazing app to find some of the most awesome gifs!
 
